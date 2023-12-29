@@ -1,0 +1,64 @@
+.body {
+  background-color: #282c34;
+}
+
+.clock {
+  display: flex;
+  font-family: 'Roboto', Sans-Serif;
+  background-color: #282c34;
+}
+
+.clock div {
+  position: relative;
+  margin: 0px 10px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+span {
+  z-index: 10;
+  position: relative;
+  width: 100px;
+  height: 80px;
+  background: #34CE67;
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: black;
+  box-shadow: 0px 0px 0px 1px #0000000066;
+}
+
+span:nth-child(2){
+  font-size: 16px;
+  height: 30px;
+  box-shadow: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(52, 206, 103, 0.521);
+  color: #fff;
+}
+
+#seconds{
+  background: #ff006a;
+  
+  & + span {
+    background: #ff006a79;
+  }
+}
+
+div:has(#ampm){
+  -webkit-box-reflect: unset;
+}
+
+#ampm {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: black;
+  bottom: 0;
+  font-size: 18px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
